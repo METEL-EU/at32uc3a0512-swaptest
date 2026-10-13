@@ -121,8 +121,8 @@ void id_print(const id_info_t *id, const boot_info_t *bi)
     id_hex_str(bid, id->board_id, (id->board_len != 0) ? BOARD_ID_SIZE : 0);
     rcause_names(bi->rcause, rc, sizeof(rc));
 
-    TPRINTF("ID fw=%s ver=%s base=%s gcc=%s image_start=0x%08lx image_len=%lu image_crc32=0x%08lx\n",
-            FW_NAME, FW_VER, FW_BASE, __VERSION__, IMAGE_START, IMAGE_LEN, id->image_crc);
+    TPRINTF("ID fw=%s ver=%s gcc=%s image_start=0x%08lx image_len=%lu image_crc32=0x%08lx\n",
+            FW_NAME, FW_VER, __VERSION__, IMAGE_START, IMAGE_LEN, id->image_crc);
     TPRINTF("ID did=0x%08lx rn=%lu(%c) pn=0x%04lx mid=0x%03lx\n",
             id->did, rn, (char)('A' + rn),
             (id->did & AVR32_DID_PN_MASK) >> AVR32_DID_PN_OFFSET,

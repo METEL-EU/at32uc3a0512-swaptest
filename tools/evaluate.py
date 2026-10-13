@@ -1,7 +1,7 @@
 """Vyhodnoceni zaznamu UART finalniho firmwaru pro jednu konfiguraci (deska + CPU).
 
 Pouziti:
-    python -I -B evaluate.py <uart.log> --sn <SN CPU> --board <Board ID> [--crc 31adbc84] [--timeout 142]
+    python -I -B evaluate.py <uart.log> --sn <SN CPU> --board <Board ID> [--crc fb47ddb9] [--timeout 142]
 
 <uart.log> je vystup capture.ps1 ("[HH:mm:ss.fff] text"). Beh = od "=== START ===" do radku "RESULT;...".
 Pro kazdy beh se kontroluje:
@@ -22,7 +22,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("log")
 ap.add_argument("--sn", required=True)
 ap.add_argument("--board", required=True)
-ap.add_argument("--crc", default="31adbc84")
+ap.add_argument("--crc", default="fb47ddb9")
 ap.add_argument("--timeout", type=float, default=142.0)
 ap.add_argument("--runs", type=int, default=3)
 a = ap.parse_args()

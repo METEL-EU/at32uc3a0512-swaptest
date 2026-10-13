@@ -9,7 +9,6 @@
 #define __fw_id_h
 
 #define FW_NAME   "swaptest_final"
-#define FW_VER    "1"
-#define FW_BASE   "r24600"      /* oznaceni vychozi verze zdroju (informativni) */
+#define FW_VER    "2"
 
 #endif  // fw_id.h

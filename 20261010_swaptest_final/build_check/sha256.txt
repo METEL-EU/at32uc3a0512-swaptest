@@ -1,9 +1,9 @@
 build 1: 20261010_swaptest_final (make COMSPEC=%ComSpec% clean all)
-4cd7372af27092bf26bbdc780b9b326bd0d3548263702afd99bf1e4c80734c84 *test_uc3a0512.bin
-e76bfd308ac4548f2dc2a3fe5be95336132be93e14af2704367550d9b88c46a7 *test_uc3a0512.elf
-1b43a8f97731e4dc37e0b3e1b2b4daad98a5ff9ca4cabc595b4a29cb90a59d43 *test_uc3a0512.map
-build 2: nezavisla kopie Makefile + src v jinem adresari (make COMSPEC=%ComSpec% clean all)
-4cd7372af27092bf26bbdc780b9b326bd0d3548263702afd99bf1e4c80734c84 *test_uc3a0512.bin
-e76bfd308ac4548f2dc2a3fe5be95336132be93e14af2704367550d9b88c46a7 *test_uc3a0512.elf
-1b43a8f97731e4dc37e0b3e1b2b4daad98a5ff9ca4cabc595b4a29cb90a59d43 *test_uc3a0512.map
-obj/*.o: vsech 43 souboru bitove shodnych mezi buildem 1 a 2
+2ecfe5317649fabd27797608f3f9924aaac45b4daa870a7546195e9975294440 *test_uc3a0512.bin
+6675e8e3e4b4ff880add0a8b817b13226083eccd2a64dc31f07db1b353e08909 *test_uc3a0512.elf
+1d4868a3c359c2721ea775b8cdcfc7acd73016ec9ce0bdf18422f513a7f073fd *test_uc3a0512.map
+build 2: independent copy of Makefile + src in another directory (make COMSPEC=%ComSpec% clean all)
+2ecfe5317649fabd27797608f3f9924aaac45b4daa870a7546195e9975294440 *test_uc3a0512.bin
+6675e8e3e4b4ff880add0a8b817b13226083eccd2a64dc31f07db1b353e08909 *test_uc3a0512.elf
+1d4868a3c359c2721ea775b8cdcfc7acd73016ec9ce0bdf18422f513a7f073fd *test_uc3a0512.map
+obj/*.o: all 43 files bit-identical between build 1 and 2

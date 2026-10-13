@@ -3737,7 +3737,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
                 0x8007fbbc                checkX19
                 0x80000008                . = __pinned_loc_save
 
-.text           0x80000008     0x84c8
+.text           0x80000008     0x84c0
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text._stext   0x80000008       0x58 obj/crt0.o
                 0x80000008                _stext
@@ -3972,205 +3972,205 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
                 0x80002458       0x40 obj/idblock.o
                 0x80002458                id_hex_str
  .text.id_print
-                0x80002498      0x25c obj/idblock.o
+                0x80002498      0x254 obj/idblock.o
                 0x80002498                id_print
  .text.id_collect
-                0x800026f4       0xdc obj/idblock.o
-                0x800026f4                id_collect
- .text          0x800027d0      0x286 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_udivdi3.o)
-                0x800027d0                __udivdi3
-                0x800027d0                __avr32_udiv64
- *fill*         0x80002a56        0x2 d703d703
+                0x800026ec       0xdc obj/idblock.o
+                0x800026ec                id_collect
+ .text          0x800027c8      0x286 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_udivdi3.o)
+                0x800027c8                __udivdi3
+                0x800027c8                __avr32_udiv64
+ *fill*         0x80002a4e        0x2 d703d703
  .text._vsnprintf_r
-                0x80002a58       0x64 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vsnprintf.o)
-                0x80002a58                _vsnprintf_r
+                0x80002a50       0x64 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vsnprintf.o)
+                0x80002a50                _vsnprintf_r
  .text.vsnprintf
-                0x80002abc       0x1c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vsnprintf.o)
-                0x80002abc                vsnprintf
- .text.get_arg  0x80002ad8      0x31c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x80002ab4       0x1c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vsnprintf.o)
+                0x80002ab4                vsnprintf
+ .text.get_arg  0x80002ad0      0x31c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .text.__sprint_r
-                0x80002df4       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x80002dec       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .text._vfprintf_r
-                0x80002e14     0x1ea4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
-                0x80002e14                _vfprintf_r
+                0x80002e0c     0x1ea4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x80002e0c                _vfprintf_r
  .text.__swsetup_r
-                0x80004cb8       0xf0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-wsetup.o)
-                0x80004cb8                __swsetup_r
- .text.quorem   0x80004da8      0x128 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
- .text._dtoa_r  0x80004ed0      0xc90 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
-                0x80004ed0                _dtoa_r
+                0x80004cb0       0xf0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-wsetup.o)
+                0x80004cb0                __swsetup_r
+ .text.quorem   0x80004da0      0x128 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
+ .text._dtoa_r  0x80004ec8      0xc90 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
+                0x80004ec8                _dtoa_r
  .text._fflush_r
-                0x80005b60      0x118 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fflush.o)
-                0x80005b60                _fflush_r
+                0x80005b58      0x118 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fflush.o)
+                0x80005b58                _fflush_r
  .text.__sfp_lock_acquire
-                0x80005c78        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005c78                __sfp_lock_acquire
+                0x80005c70        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005c70                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x80005c7a        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005c7a                __sfp_lock_release
+                0x80005c72        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005c72                __sfp_lock_release
  .text._cleanup_r
-                0x80005c7c       0x14 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005c7c                _cleanup_r
+                0x80005c74       0x14 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005c74                _cleanup_r
  .text.__sfmoreglue
-                0x80005c90       0x30 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005c90                __sfmoreglue
- .text.__sfp    0x80005cc0       0x7c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005cc0                __sfp
- .text.__sinit  0x80005d3c       0xb0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x80005d3c                __sinit
+                0x80005c88       0x30 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005c88                __sfmoreglue
+ .text.__sfp    0x80005cb8       0x7c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005cb8                __sfp
+ .text.__sinit  0x80005d34       0xb0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x80005d34                __sinit
  .text._malloc_trim_r
-                0x80005dec       0xa8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-freer.o)
-                0x80005dec                _malloc_trim_r
- .text._free_r  0x80005e94      0x1ac c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-freer.o)
-                0x80005e94                _free_r
+                0x80005de4       0xa8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-freer.o)
+                0x80005de4                _malloc_trim_r
+ .text._free_r  0x80005e8c      0x1ac c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-freer.o)
+                0x80005e8c                _free_r
  .text.__sfvwrite_r
-                0x80006040      0x2b4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fvwrite.o)
-                0x80006040                __sfvwrite_r
- .text._fwalk   0x800062f4       0x54 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fwalk.o)
-                0x800062f4                _fwalk
+                0x80006038      0x2b4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fvwrite.o)
+                0x80006038                __sfvwrite_r
+ .text._fwalk   0x800062ec       0x54 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fwalk.o)
+                0x800062ec                _fwalk
  .text._localeconv_r
-                0x80006348        0x8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
-                0x80006348                _localeconv_r
+                0x80006340        0x8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
+                0x80006340                _localeconv_r
  .text.__smakebuf_r
-                0x80006350       0xd8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-makebuf.o)
-                0x80006350                __smakebuf_r
- .text.malloc   0x80006428       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-malloc.o)
-                0x80006428                malloc
+                0x80006348       0xd8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-makebuf.o)
+                0x80006348                __smakebuf_r
+ .text.malloc   0x80006420       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-malloc.o)
+                0x80006420                malloc
  .text._malloc_r
-                0x80006440      0x488 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mallocr.o)
-                0x80006440                _malloc_r
- .text.memchr   0x800068c8       0x16 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memchr.o)
-                0x800068c8                memchr
- .text          0x800068de      0x148 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memcpy.o)
-                0x800068de                memcpy
- .text.memmove  0x80006a26       0x3e c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memmove.o)
-                0x80006a26                memmove
- .text.memset   0x80006a64        0xe c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memset.o)
-                0x80006a64                memset
+                0x80006438      0x488 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mallocr.o)
+                0x80006438                _malloc_r
+ .text.memchr   0x800068c0       0x16 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memchr.o)
+                0x800068c0                memchr
+ .text          0x800068d6      0x148 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memcpy.o)
+                0x800068d6                memcpy
+ .text.memmove  0x80006a1e       0x3e c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memmove.o)
+                0x80006a1e                memmove
+ .text.memset   0x80006a5c        0xe c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-memset.o)
+                0x80006a5c                memset
  .text.__malloc_lock
-                0x80006a72        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mlock.o)
-                0x80006a72                __malloc_lock
+                0x80006a6a        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mlock.o)
+                0x80006a6a                __malloc_lock
  .text.__malloc_unlock
-                0x80006a74        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mlock.o)
-                0x80006a74                __malloc_unlock
+                0x80006a6c        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mlock.o)
+                0x80006a6c                __malloc_unlock
  .text.__hi0bits
-                0x80006a76       0x5e c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006a76                __hi0bits
+                0x80006a6e       0x5e c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006a6e                __hi0bits
  .text.__lo0bits
-                0x80006ad4       0x8c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006ad4                __lo0bits
- .text.__mcmp   0x80006b60       0x3a c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006b60                __mcmp
- *fill*         0x80006b9a        0x2 d703d703
- .text._Bfree   0x80006b9c       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006b9c                _Bfree
- .text._Balloc  0x80006bd4       0x78 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006bd4                _Balloc
- .text.__d2b    0x80006c4c       0xbc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006c4c                __d2b
- .text.__mdiff  0x80006d08       0xdc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006d08                __mdiff
+                0x80006acc       0x8c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006acc                __lo0bits
+ .text.__mcmp   0x80006b58       0x3a c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006b58                __mcmp
+ *fill*         0x80006b92        0x2 d703d703
+ .text._Bfree   0x80006b94       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006b94                _Bfree
+ .text._Balloc  0x80006bcc       0x78 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006bcc                _Balloc
+ .text.__d2b    0x80006c44       0xbc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006c44                __d2b
+ .text.__mdiff  0x80006d00       0xdc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006d00                __mdiff
  .text.__lshift
-                0x80006de4       0x98 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006de4                __lshift
+                0x80006ddc       0x98 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006ddc                __lshift
  .text.__multiply
-                0x80006e7c      0x108 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006e7c                __multiply
- .text.__i2b    0x80006f84       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006f84                __i2b
+                0x80006e74      0x108 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006e74                __multiply
+ .text.__i2b    0x80006f7c       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006f7c                __i2b
  .text.__multadd
-                0x80006f9c       0x90 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80006f9c                __multadd
+                0x80006f94       0x90 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80006f94                __multadd
  .text.__pow5mult
-                0x8000702c       0xac c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x8000702c                __pow5mult
+                0x80007024       0xac c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80007024                __pow5mult
  .text._realloc_r
-                0x800070d8      0x318 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-reallocr.o)
-                0x800070d8                _realloc_r
+                0x800070d0      0x318 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-reallocr.o)
+                0x800070d0                _realloc_r
  .text.__isinfd
-                0x800073f0       0x22 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-s_isinfd.o)
-                0x800073f0                __isinfd
+                0x800073e8       0x22 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-s_isinfd.o)
+                0x800073e8                __isinfd
  .text.__isnand
-                0x80007412       0x1a c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-s_isnand.o)
-                0x80007412                __isnand
- .text._sbrk_r  0x8000742c       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-sbrkr.o)
-                0x8000742c                _sbrk_r
+                0x8000740a       0x1a c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-s_isnand.o)
+                0x8000740a                __isnand
+ .text._sbrk_r  0x80007424       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-sbrkr.o)
+                0x80007424                _sbrk_r
  .text.__sclose
-                0x80007454       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
-                0x80007454                __sclose
- .text.__sseek  0x80007464       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
-                0x80007464                __sseek
+                0x8000744c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
+                0x8000744c                __sclose
+ .text.__sseek  0x8000745c       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
+                0x8000745c                __sseek
  .text.__swrite
-                0x80007490       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
-                0x80007490                __swrite
- .text.__sread  0x800074c8       0x24 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
-                0x800074c8                __sread
- .text.strlen   0x800074ec       0x14 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-strlen.o)
-                0x800074ec                strlen
- .text._close   0x80007500       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007500                _close
- .text._lseek   0x80007518       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007518                _lseek
- .text._read    0x80007530       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007530                _read
- .text._write   0x80007548       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007548                _write
- .text.isatty   0x80007560       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007560                isatty
+                0x80007488       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
+                0x80007488                __swrite
+ .text.__sread  0x800074c0       0x24 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-stdio.o)
+                0x800074c0                __sread
+ .text.strlen   0x800074e4       0x14 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-strlen.o)
+                0x800074e4                strlen
+ .text._close   0x800074f8       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x800074f8                _close
+ .text._lseek   0x80007510       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007510                _lseek
+ .text._read    0x80007528       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007528                _read
+ .text._write   0x80007540       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007540                _write
+ .text.isatty   0x80007558       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007558                isatty
  .text._fstat_host
-                0x80007578       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007578                _fstat_host
- .text._fstat   0x80007590       0x50 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x80007590                _fstat
- .text._sbrk    0x800075e0       0x40 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
-                0x800075e0                _sbrk
+                0x80007570       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007570                _fstat_host
+ .text._fstat   0x80007588       0x50 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x80007588                _fstat
+ .text._sbrk    0x800075d8       0x40 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-syscalls.o)
+                0x800075d8                _sbrk
  .text._write_r
-                0x80007620       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-writer.o)
-                0x80007620                _write_r
+                0x80007618       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-writer.o)
+                0x80007618                _write_r
  .text._calloc_r
-                0x8000764c       0x64 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-callocr.o)
-                0x8000764c                _calloc_r
+                0x80007644       0x64 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-callocr.o)
+                0x80007644                _calloc_r
  .text._close_r
-                0x800076b0       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-closer.o)
-                0x800076b0                _close_r
- .text.__errno  0x800076d8        0xc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-errno.o)
-                0x800076d8                __errno
+                0x800076a8       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-closer.o)
+                0x800076a8                _close_r
+ .text.__errno  0x800076d0        0xc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-errno.o)
+                0x800076d0                __errno
  .text._fclose_r
-                0x800076e4       0xd0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fclose.o)
-                0x800076e4                _fclose_r
- .text.fclose   0x800077b4       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fclose.o)
-                0x800077b4                fclose
+                0x800076dc       0xd0 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fclose.o)
+                0x800076dc                _fclose_r
+ .text.fclose   0x800077ac       0x18 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fclose.o)
+                0x800077ac                fclose
  .text._fstat_r
-                0x800077cc       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fstatr.o)
-                0x800077cc                _fstat_r
+                0x800077c4       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-fstatr.o)
+                0x800077c4                _fstat_r
  .text._lseek_r
-                0x800077f8       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-lseekr.o)
-                0x800077f8                _lseek_r
- .text._read_r  0x80007824       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-readr.o)
-                0x80007824                _read_r
- .text          0x80007850      0x1e4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_mul.o)
-                0x80007850                __avr32_f64_mul
- .text          0x80007a34      0x2b8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_addsub.o)
-                0x80007a38                __avr32_f64_sub
-                0x80007bd4                __avr32_f64_add
- .text          0x80007cec       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_to_s32.o)
-                0x80007cf0                __avr32_f64_to_s32
-                0x80007cec                __avr32_f64_to_u32
- .text          0x80007d24       0xf6 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_s32_to_f64.o)
-                0x80007d2c                __avr32_s32_to_f64
-                0x80007d24                __avr32_u32_to_f64
- .text          0x80007e1a       0x34 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_eq.o)
-                0x80007e1a                __avr32_f64_cmp_eq
- .text          0x80007e4e       0x68 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_ge.o)
-                0x80007e4e                __avr32_f64_cmp_ge
- .text          0x80007eb6       0x68 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_lt.o)
-                0x80007eb6                __avr32_f64_cmp_lt
- *fill*         0x80007f1e        0x2 d703d703
- .text          0x80007f20      0x324 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_div.o)
-                0x80007f30                __avr32_f64_div
- .text          0x80008244      0x28c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_umoddi3.o)
-                0x80008244                __umoddi3
-                0x80008244                __avr32_umod64
+                0x800077f0       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-lseekr.o)
+                0x800077f0                _lseek_r
+ .text._read_r  0x8000781c       0x2c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-readr.o)
+                0x8000781c                _read_r
+ .text          0x80007848      0x1e4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_mul.o)
+                0x80007848                __avr32_f64_mul
+ .text          0x80007a2c      0x2b8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_addsub.o)
+                0x80007a30                __avr32_f64_sub
+                0x80007bcc                __avr32_f64_add
+ .text          0x80007ce4       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_to_s32.o)
+                0x80007ce8                __avr32_f64_to_s32
+                0x80007ce4                __avr32_f64_to_u32
+ .text          0x80007d1c       0xf6 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_s32_to_f64.o)
+                0x80007d24                __avr32_s32_to_f64
+                0x80007d1c                __avr32_u32_to_f64
+ .text          0x80007e12       0x34 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_eq.o)
+                0x80007e12                __avr32_f64_cmp_eq
+ .text          0x80007e46       0x68 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_ge.o)
+                0x80007e46                __avr32_f64_cmp_ge
+ .text          0x80007eae       0x68 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_cmp_lt.o)
+                0x80007eae                __avr32_f64_cmp_lt
+ *fill*         0x80007f16        0x2 d703d703
+ .text          0x80007f18      0x324 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_avr32_f64_div.o)
+                0x80007f28                __avr32_f64_div
+ .text          0x8000823c      0x28c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_umoddi3.o)
+                0x8000823c                __umoddi3
+                0x8000823c                __avr32_umod64
  *(.text.*personality*)
  *(.gnu.warning)
 
@@ -4185,80 +4185,80 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
                 0x80008800                PROVIDE (_etext, .)
                 0x80008800                PROVIDE (etext, .)
 
-.rodata         0x80008800     0x114c
+.rodata         0x80008800     0x1138
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x80008800      0x58d obj/main.o
+                0x80008800      0x589 obj/main.o
                                 0x594 (size before relaxing)
- *fill*         0x80008d8d        0x3 00
+ *fill*         0x80008d89        0x3 00
  .rodata.str1.4
-                0x80008d90        0x2 obj/uartdebug.o
+                0x80008d8c        0x2 obj/uartdebug.o
                                   0x4 (size before relaxing)
- *fill*         0x80008d92        0x2 00
+ *fill*         0x80008d8e        0x2 00
  .rodata.str1.4
-                0x80008d94       0x1b obj/spi_flash.o
+                0x80008d90       0x1b obj/spi_flash.o
                                  0x28 (size before relaxing)
- *fill*         0x80008daf        0x1 00
+ *fill*         0x80008dab        0x1 00
  .rodata.str1.4
-                0x80008db0      0x1e8 obj/exception_stub.o
+                0x80008dac      0x1e8 obj/exception_stub.o
                                 0x1ec (size before relaxing)
  .rodata.str1.4
-                0x80008f98       0xa6 obj/lowleveinit.o
+                0x80008f94       0xa6 obj/lowleveinit.o
                                  0xac (size before relaxing)
- *fill*         0x8000903e        0x2 00
+ *fill*         0x8000903a        0x2 00
  .rodata.str1.4
-                0x80009040      0x369 obj/idblock.o
-                                0x380 (size before relaxing)
- *fill*         0x800093a9        0x3 00
+                0x8000903c      0x359 obj/idblock.o
+                                0x370 (size before relaxing)
+ *fill*         0x80009395        0x3 00
  .rodata.str1.4
-                0x800093ac        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-impure.o)
+                0x80009398        0x2 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x800093ae        0x2 00
+ *fill*         0x8000939a        0x2 00
  .rodata._global_impure_ptr
-                0x800093b0        0x4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-impure.o)
-                0x800093b0                _global_impure_ptr
+                0x8000939c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-impure.o)
+                0x8000939c                _global_impure_ptr
  .rodata.get_arg
-                0x800093b4       0x3c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x800093a0       0x3c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata._vfprintf_r
-                0x800093f0      0x164 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x800093dc      0x164 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.state_table
-                0x80009554       0x6c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x80009540       0x6c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.zeroes.3384
-                0x800095c0       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x800095ac       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.action_table
-                0x800095d0       0x6c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x800095bc       0x6c c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.str1.4
-                0x8000963c       0x52 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x80009628       0x52 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
                                  0x58 (size before relaxing)
- *fill*         0x8000968e        0x2 00
+ *fill*         0x8000967a        0x2 00
  .rodata.blanks.3383
-                0x80009690       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x8000967c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.chclass
-                0x800096a0      0x100 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
+                0x8000968c      0x100 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-vfprintf.o)
  .rodata.str1.4
-                0x800097a0       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
+                0x8000978c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-dtoa.o)
                                  0x14 (size before relaxing)
  .rodata.__sf_fake_stdin
-                0x800097b0       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x800097b0                __sf_fake_stdin
+                0x8000979c       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x8000979c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x800097d0       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x800097d0                __sf_fake_stdout
+                0x800097bc       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x800097bc                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x800097f0       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
-                0x800097f0                __sf_fake_stderr
- .rodata.lconv  0x80009810       0x30 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
+                0x800097dc       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-findfp.o)
+                0x800097dc                __sf_fake_stderr
+ .rodata.lconv  0x800097fc       0x30 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
  .rodata.str1.4
-                0x80009840       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
+                0x8000982c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-locale.o)
                                  0x18 (size before relaxing)
  .rodata.__mprec_tens
-                0x80009850       0xc8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80009850                __mprec_tens
+                0x8000983c       0xc8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x8000983c                __mprec_tens
  .rodata.p05.2371
-                0x80009918        0xc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80009904        0xc c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
  .rodata.__mprec_bigtens
-                0x80009924       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
-                0x80009924                __mprec_bigtens
+                0x80009910       0x28 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/../../../../avr32/lib/ucr2\libc.a(lib_a-mprec.o)
+                0x80009910                __mprec_bigtens
 
 .rodata1
  *(.rodata1)
@@ -4273,10 +4273,9 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
  *(.gcc_except_table)
  *(.gcc_except_table.*)
 
-.dalign         0x8000994c        0x4
-                0x80009950                . = ALIGN (0x8)
- *fill*         0x8000994c        0x4 00
-                0x80009950                PROVIDE (_data_lma, .)
+.dalign         0x80009938        0x0
+                0x80009938                . = ALIGN (0x8)
+                0x80009938                PROVIDE (_data_lma, .)
                 0x00000004                PROVIDE (_data, 0x4)
                 0x00000004                . = 0x4
 
@@ -4335,7 +4334,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
  *(.got.plt)
  *(.got)
 
-.data           0x00000004      0x51c load address 0x80009950
+.data           0x00000004      0x51c load address 0x80009938
  *(.data .data.* .gnu.linkonce.d.*)
  .data          0x00000004       0x18 obj/uart0.o
  .data.impure_data
@@ -4357,7 +4356,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
 .data1
  *(.data1)
 
-.balign         0x00000520        0x0 load address 0x80009e6c
+.balign         0x00000520        0x0 load address 0x80009e54
                 0x00000520                . = ALIGN (0x8)
                 0x00000520                _edata = .
                 0x00000520                _edata = .
@@ -4554,7 +4553,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
  .debug_line    0x00000144      0x1b3 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_udivdi3.o)
  .debug_line    0x000002f7      0x1e8 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_umoddi3.o)
 
-.debug_frame    0x00000000     0x1c14
+.debug_frame    0x00000000     0x1c10
  *(.debug_frame)
  .debug_frame   0x00000000       0x20 obj/dataA.o
  .debug_frame   0x00000020       0x20 obj/dataB.o
@@ -4595,11 +4594,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a
  .debug_frame   0x00001290       0x98 obj/wdt.o
  .debug_frame   0x00001328      0x5b0 obj/flashc.o
  .debug_frame   0x000018d8       0xb0 obj/rawuart.o
- .debug_frame   0x00001988      0x1dc obj/idblock.o
- .debug_frame   0x00001b64       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_lshrdi3.o)
- .debug_frame   0x00001b84       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_ashldi3.o)
- .debug_frame   0x00001ba4       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_udivdi3.o)
- .debug_frame   0x00001bdc       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_umoddi3.o)
+ .debug_frame   0x00001988      0x1d8 obj/idblock.o
+ .debug_frame   0x00001b60       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_lshrdi3.o)
+ .debug_frame   0x00001b80       0x20 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_ashldi3.o)
+ .debug_frame   0x00001ba0       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00001bd8       0x38 c:/winavr-20100110/bin/../lib/gcc/avr32/4.3.2/ucr2\libgcc.a(_umoddi3.o)
 
 .debug_str      0x00000000      0x165
  *(.debug_str)
