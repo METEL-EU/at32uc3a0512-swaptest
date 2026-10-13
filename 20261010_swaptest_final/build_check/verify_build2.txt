@@ -1,0 +1,42 @@
+1 SHA-256
+  test_uc3a0512.bin       523268 B  4CD7372AF27092BF26BBDC780B9B326BD0D3548263702AFD99BF1E4C80734C84
+  test_uc3a0512.elf       476245 B  E76BFD308AC4548F2DC2A3FE5BE95336132BE93E14AF2704367550D9B88C46A7
+2 image length
+  [OK] .bin 523268 B (0x7FC04), IMAGE_LEN 0x7FC04
+3 placement of the test core (src/placement.ld)
+  [OK] placement.ld: 24 table anchors, 480 check functions
+  [OK] data_padding_X at anchor (0x200 B), dataX = anchor + 0x200 (128 words)
+  [OK] 480 functions checkXn at the addresses from placement.ld
+  test core: 0x8000A000..0x8007FC01 (tables + check functions), check function size: 70 B
+  table anchors: A..K 0x8000A000..0x8003C000, L..X 0x80041000..0x8007D000, spacing 0x5000
+  checkXn = anchor + 0x5BC + n*0x200; read address adr= is &dataX[0x77] = anchor + 0x3DC
+4 table contents in the image
+  [OK] all 24 tables: data[0] = 0x00000000, data[0x77] = 0xFFFFFFFF (expected value data[0]^data[0x77] = 0xFFFFFFFF)
+5 check and ref functions
+  [OK] 20 functions checkXn of each table bit-identical
+  [OK] refA..refX at 0x80000060 + k*0x10, size 0x10 (0x80000060..0x800001DF)
+6 critical reads
+  [OK] refX+0x04 'ld.w r12,r8[476]', checkXn+0x30 'ld.w r10,r8[512]' (504 functions)
+7 layout below 0x8000A000
+  .text       LMA 0x80000008..0x800084CF (33992 B)
+  .exception  LMA 0x80008600..0x800087FF (512 B)
+  .rodata     LMA 0x80008800..0x8000994B (4428 B)
+  .data       LMA 0x80009950..0x80009E6B (1308 B)
+  [OK] .data LMA ends 0x80009E6B, reserve up to 0x8000A000: 404 B
+  RAM: .bss up to 0x000030C7, stack 0x0000F000..0x0000FFFF
+8 FLASHC
+  FCR      read: flashc_set_wait_state,id_collect write: flashc_set_wait_state
+  FSR      read: id_collect                     write: -
+  FGPFRHI  read: id_collect                     write: -
+  FGPFRLO  read: id_collect                     write: -
+  [OK] the only write to FLASHC is FCR in flashc_set_wait_state
+  [OK] linked from flashc.c only: flashc_set_wait_state
+9 image CRC32
+  zlib.crc32(.bin) = 0x31adbc84 (must match 'ID ... image_crc32=')
+  __VERSION__ in the image: 4.3.2
+10 measurement loop in main() (informative)
+  [INFO] ref   0x80000DA0..0x80000DA8  5 instr.: ld.w icall st.w cp.w brne
+  [INFO] check 0x80000DC0..0x80000DE6 17 instr.: ld.w icall st.w sub ld.w cp.w breq ld.w sub mov st.w ld.w sub st.w sub cp.w brne
+  [INFO] outer 0x80000DE8..0x80000E02 11 instr.: sub sub sub cp.w breq add lddsp lsl add add rjmp
+
+RESULT: all OK

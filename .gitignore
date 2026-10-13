@@ -1,0 +1,4 @@
+# build intermediates and tool artifacts
+obj/
+*.stackdump
+__pycache__/
