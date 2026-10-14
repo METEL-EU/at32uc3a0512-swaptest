@@ -7,6 +7,8 @@ param(
 # Vystup v $OutDir: info.txt, flash.bin, userpage.bin, flashc.bin a readback.txt s porovnanim:
 #   SHA-256 flash 0x80000000 + delka binarky == SHA-256 binarky, zbytek flash 0xFF.
 # Kazda session atprogram na konci CPU resetuje.
+$OutDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutDir)   # absolutni cesta, skript meni aktualni slozku
+$Bin = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Bin)   # absolutni cesta, skript meni aktualni slozku
 $ErrorActionPreference = 'Continue'
 $env:TEMP = 'C:\Windows\Temp'; $env:TMP = 'C:\Windows\Temp'   # atprogram nesnese diakritiku v ceste TEMP
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null

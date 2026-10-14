@@ -8,6 +8,7 @@ param(
 # $Out.raw = surova data beze zmeny, $Out.log = radky s absolutnim casem prijmu prvniho znaku
 # "[HH:mm:ss.fff] text" (netisknutelne bajty jako <xx>) a "# EVT" radky udalosti linky
 # (ErrorReceived/PinChanged, napr. break pri vypnuti napajeni).
+$Out = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Out)   # absolutni cesta, skript meni aktualni slozku
 $raw = [IO.File]::Open("$Out.raw", 'CreateNew', 'Write')
 $log = New-Object IO.StreamWriter("$Out.log", $false, [Text.Encoding]::ASCII)
 $log.AutoFlush = $true

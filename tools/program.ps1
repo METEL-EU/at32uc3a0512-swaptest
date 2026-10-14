@@ -6,6 +6,8 @@ param(
 # Nahrani binarky pres JTAG: chiperase + program od 0x80000000 (user page se chiperase nemaze).
 # Vystup v $OutDir\program.txt: cas, SHA-256 binarky, prikaz, navratovy kod a vystup atprogram.
 # Overeni obsahu se dela zvlast zpetnym ctenim (readback.ps1).
+$OutDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutDir)   # absolutni cesta, skript meni aktualni slozku
+$Bin = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Bin)   # absolutni cesta, skript meni aktualni slozku
 $ErrorActionPreference = 'Continue'
 $env:TEMP = 'C:\Windows\Temp'; $env:TMP = 'C:\Windows\Temp'   # atprogram nesnese diakritiku v ceste TEMP ani -f
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
