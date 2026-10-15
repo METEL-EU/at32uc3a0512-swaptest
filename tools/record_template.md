@@ -25,8 +25,8 @@ Procedure according to the swap test protocol, section "Measurement procedure fo
 - [ ] VDDIO, VDDIN, VDDCORE and ambient temperature measured during the 1st run (below)
 - [ ] Capture stopped, evaluation `tools/evaluate.py` → `evaluate.txt`
 - [ ] Hashes `tools/sha256sums.ps1` → `SHA256SUMS`, commit and push
-- [ ] SHA-256 of `SHA256SUMS` sent by e-mail to the recipient of the results
-- [ ] Signatures of the operator and the checker
+
+The e-mail with the SHA-256 of `SHA256SUMS` and the signatures follow the hashes and are therefore not part of this record. The SHA-256 of `SHA256SUMS` and the date of the e-mail are entered in the table of records in the protocol; the signatures of the operator and the checker on the protocol cover that table.
 
 ## Measurements during the 1st run
 
