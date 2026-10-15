@@ -1,0 +1,11 @@
+readback 2026-10-15 14:59:14 bin=test_uc3a0512.bin
+info exit=0
+read flash.bin 0x80000000 size 0x80000 exit=0
+read userpage.bin 0x80800000 size 0x200 exit=0
+read flashc.bin 0xFFFE1400 size 0x14 exit=0
+bin    len=523268 sha256=2ecfe5317649fabd27797608f3f9924aaac45b4daa870a7546195e9975294440
+flash  0x80000000..0x8007FC03 sha256=2ecfe5317649fabd27797608f3f9924aaac45b4daa870a7546195e9975294440
+flash  rest up to 0x8007FFFF: bytes other than 0xFF = 0
+userpage sha256=074643a483e467dacda596cf31304d180facfdbba8bf2015f0b986561fe0f9ef
+FLASHC FCR=0x00000000 FSR=0x0000a001 FGPFRHI=0xffffffff FGPFRLO=0xffffffff
+RESULT OK: flash matches the binary

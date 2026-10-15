@@ -1,0 +1,14 @@
+record: REG_PCB2-Y\uart.log
+expected: sn=ba16905e4450334d342e3120ff0714 board=8a3203841518175d crc=fb47ddb9
+run 1: START 15:04:45.418 -> PASS  valid
+    duration 112.8 s, cycles 100/100, errors 0/48000 (min 0, max 0, failed cycles 0, first 0), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65844070, osc0rdy_wait 2034, lock0_wait 1116, oscctrl0 0x00000307, fcr 0x00000040
+run 2: START 15:07:17.590 -> PASS  valid
+    duration 112.8 s, cycles 100/100, errors 0/48000 (min 0, max 0, failed cycles 0, first 0), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65829870, osc0rdy_wait 2034, lock0_wait 1116, oscctrl0 0x00000307, fcr 0x00000040
+run 3: START 15:10:15.706 -> PASS  valid
+    duration 112.8 s, cycles 100/100, errors 0/48000 (min 0, max 0, failed cycles 0, first 0), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65827870, osc0rdy_wait 2034, lock0_wait 1116, oscctrl0 0x00000307, fcr 0x00000040
+
+runs with START: 3, valid: 3, results: ['PASS', 'PASS', 'PASS']
+CONFIGURATION RESULT: PASS
