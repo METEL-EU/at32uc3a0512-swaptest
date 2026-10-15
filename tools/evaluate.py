@@ -1,18 +1,18 @@
-"""Vyhodnoceni zaznamu UART finalniho firmwaru pro jednu konfiguraci (deska + CPU).
+"""Evaluation of the UART record of the final firmware for one configuration (board + CPU).
 
-Pouziti:
-    python -I -B evaluate.py <uart.log> --sn <SN CPU> --board <Board ID> [--crc fb47ddb9] [--timeout 142]
+Usage:
+    python -I -B evaluate.py <uart.log> --sn <CPU SN> --board <Board ID> [--crc fb47ddb9] [--timeout 142]
 
-<uart.log> je vystup capture.ps1 ("[HH:mm:ss.fff] text"). Beh = od "=== START ===" do radku "RESULT;...".
-Pro kazdy beh se kontroluje:
-  - platnost: SN CPU a Board ID ve START, FINISH i RESULT odpovidaji ocekavanemu paru,
-    CRC32 obrazu flash (ID blok START i FINISH, fw_crc, fw_crc_end) == --crc, platne crc radku RESULT;
-  - vysledek: FAIL = RESULT s poctem chyb >= 1, PASS = RESULT, 100 cyklu, 0 chyb,
-    INCOMPLETE (NEUPLNY) = RESULT chybi do --timeout s od START (nebo prisel dalsi START).
-Beh, ktery se nerozbehl (zadny vystup po zapnuti), ze zaznamu poznat nelze; zapisuje ho obsluha.
-Vysledek konfigurace: FAIL = 3 ze 3 platnych behu FAIL, PASS = 3 ze 3 PASS, NOT COMPLETE = mene nez
-3 platne behy se shodnym vysledkem, jinak INCONSISTENT (NEKONZISTENTNI).
-Jen cte; vypis jde na stdout (anglicky).
+<uart.log> is the output of capture.ps1 ("[HH:mm:ss.fff] text"). A run = from "=== START ===" to the "RESULT;..." line.
+Every run is checked for:
+  - validity: CPU SN and Board ID in START, FINISH and RESULT match the expected pair,
+    CRC32 of the flash image (ID block in START and FINISH, fw_crc, fw_crc_end) == --crc, valid crc of the RESULT line;
+  - result: FAIL = RESULT with at least 1 error, PASS = RESULT, 100 cycles, 0 errors,
+    INCOMPLETE = no RESULT within --timeout s from START (or another START came first).
+A run that did not start (no output after power-on) cannot be recognised in the record; the operator records it.
+Configuration result: FAIL = 3 of 3 valid runs FAIL, PASS = 3 of 3 PASS, NOT COMPLETE = fewer than
+3 valid runs with the same result, otherwise INCONSISTENT.
+Read only; the output goes to stdout.
 """
 import argparse
 import re
@@ -40,7 +40,7 @@ for raw in open(a.log, encoding="ascii", errors="replace"):
     if not m:
         continue
     t, text = secs(m), m.group(4)
-    if prev is not None and t < prev - 43200:  # prechod pres pulnoc
+    if prev is not None and t < prev - 43200:  # crossing midnight
         t += 86400
     prev = t
     if text.startswith("=== START ==="):

@@ -1,16 +1,16 @@
 param(
-    [Parameter(Mandatory = $true)][string]$OutDir,   # slozka konfigurace, napr. REG_PCB1-X
-    [Parameter(Mandatory = $true)][string]$Bin,      # binarka, se kterou se flash porovnava
+    [Parameter(Mandatory = $true)][string]$OutDir,   # configuration folder, e.g. REG_PCB1-X
+    [Parameter(Mandatory = $true)][string]$Bin,      # binary the flash is compared with
     [string]$Atprogram = 'C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\atprogram.exe'
 )
-# Zpetne cteni pres JTAG (jen cteni, nic se nezapisuje): info, flash 512 KB, user page, registry FLASHC.
-# Vystup v $OutDir: info.txt, flash.bin, userpage.bin, flashc.bin a readback.txt s porovnanim:
-#   SHA-256 flash 0x80000000 + delka binarky == SHA-256 binarky, zbytek flash 0xFF.
-# Kazda session atprogram na konci CPU resetuje.
-$OutDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutDir)   # absolutni cesta, skript meni aktualni slozku
-$Bin = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Bin)   # absolutni cesta, skript meni aktualni slozku
+# Readback over JTAG (read only, nothing is written): info, 512 KB flash, user page, FLASHC registers.
+# Output in $OutDir: info.txt, flash.bin, userpage.bin, flashc.bin and readback.txt with the comparison:
+#   SHA-256 of flash from 0x80000000 over the length of the binary == SHA-256 of the binary, rest of flash 0xFF.
+# Every atprogram session resets the CPU at its end. Exit code 0 = RESULT OK, 1 = mismatch or read error.
+$OutDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutDir)   # absolute path, the script changes the current folder
+$Bin = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Bin)   # absolute path, the script changes the current folder
 $ErrorActionPreference = 'Continue'
-$env:TEMP = 'C:\Windows\Temp'; $env:TMP = 'C:\Windows\Temp'   # atprogram nesnese diakritiku v ceste TEMP
+$env:TEMP = 'C:\Windows\Temp'; $env:TMP = 'C:\Windows\Temp'   # atprogram fails with diacritics in the TEMP path
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $base = @('-t', 'jtagice3', '-i', 'jtag', '-d', 'at32uc3a0512')
 $reads = @(
@@ -62,3 +62,4 @@ if (Test-Path $fc) {
 }
 Note ('RESULT ' + $(if ($ok) { 'OK: flash matches the binary' } else { 'MISMATCH or read error -> STOP' }))
 [IO.File]::WriteAllLines((Join-Path $OutDir 'readback.txt'), [string[]]$report)
+exit $(if ($ok) { 0 } else { 1 })

@@ -1,14 +1,14 @@
 param(
-    [Parameter(Mandatory = $true)][string]$Out,      # zaklad jmena, napr. REG_PCB1-X\uart -> uart.raw, uart.log
+    [Parameter(Mandatory = $true)][string]$Out,      # base name, e.g. REG_PCB1-X\uart -> uart.raw, uart.log
     [string]$Port = 'COM6',
     [int]$Baud = 115200,
     [double]$Seconds = 1800
 )
-# Pasivni zaznam UART: nic se neposila, DTR/RTS vypnute. Konci po $Seconds nebo ukoncenim procesu.
-# $Out.raw = surova data beze zmeny, $Out.log = radky s absolutnim casem prijmu prvniho znaku
-# "[HH:mm:ss.fff] text" (netisknutelne bajty jako <xx>) a "# EVT" radky udalosti linky
-# (ErrorReceived/PinChanged, napr. break pri vypnuti napajeni).
-$Out = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Out)   # absolutni cesta, skript meni aktualni slozku
+# Passive UART capture: nothing is sent, DTR/RTS off. Ends after $Seconds or when the process is stopped.
+# $Out.raw = raw data unchanged, $Out.log = lines with the absolute receive time of their first character
+# "[HH:mm:ss.fff] text" (non-printable bytes as <xx>) and "# EVT" lines with line events
+# (ErrorReceived/PinChanged, e.g. a break at power-on or power-off).
+$Out = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($Out)   # absolute path
 $raw = [IO.File]::Open("$Out.raw", 'CreateNew', 'Write')
 $log = New-Object IO.StreamWriter("$Out.log", $false, [Text.Encoding]::ASCII)
 $log.AutoFlush = $true
