@@ -1,0 +1,14 @@
+record: REG_PCB1-X\uart.log
+expected: sn=141916cb4450334d342e3120ff060b board=8a32128415213248 crc=fb47ddb9
+run 1: START 10:22:45.854 -> FAIL  valid
+    duration 120.3 s, cycles 100/100, errors 44508/48000 (min 429, max 463, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65885270, osc0rdy_wait 2034, lock0_wait 1062, oscctrl0 0x00000307, fcr 0x00000040
+run 2: START 10:25:30.028 -> FAIL  valid
+    duration 120.3 s, cycles 100/100, errors 44384/48000 (min 424, max 458, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65812870, osc0rdy_wait 2034, lock0_wait 1098, oscctrl0 0x00000307, fcr 0x00000040
+run 3: START 10:28:20.742 -> FAIL  valid
+    duration 120.3 s, cycles 100/100, errors 44387/48000 (min 434, max 455, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65830670, osc0rdy_wait 2034, lock0_wait 1116, oscctrl0 0x00000307, fcr 0x00000040
+
+runs with START: 3, valid: 3, results: ['FAIL', 'FAIL', 'FAIL']
+CONFIGURATION RESULT: FAIL

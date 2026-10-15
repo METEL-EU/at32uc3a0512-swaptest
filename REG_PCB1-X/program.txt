@@ -1,0 +1,7 @@
+program 2026-10-15 09:26:18 bin=test_uc3a0512.bin sha256=2ecfe5317649fabd27797608f3f9924aaac45b4daa870a7546195e9975294440
+atprogram -t jtagice3 -i jtag -d at32uc3a0512 chiperase program --format bin -o 0x80000000 -f C:\Windows\Temp\swaptest_program.bin
+  Firmware check OK
+  Chiperase completed successfully
+  Programming completed successfully.
+exit=0
+RESULT programmed, verify by readback (readback.ps1)
