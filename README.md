@@ -78,4 +78,4 @@ git add REG_PCB1-X && git commit && git push
 
 ## Integrity of the records
 
-After every step the SHA-256 of the folder's `SHA256SUMS` file is sent by e-mail to the recipient of the results and entered, with the date of the e-mail, in the table of records in the protocol; the signatures of the operator and the checker on the protocol cover that table. The repository itself does not prevent rewriting of the history; the evidential value of the records rests on the hashes and their copy held by a third party. Raw records are never edited; a correction is stored as a new file with a note.
+After every step the SHA-256 of the folder's `SHA256SUMS` file is entered in the table of records in the protocol. After the test the completed protocol, signed by the operator and the checker, is sent by e-mail to the recipient of the results; the signatures cover the table of records. The repository itself does not prevent rewriting of the history; the evidential value of the records rests on the hashes and the copy of the protocol held by the recipient. Raw records are never edited; a correction is stored as a new file with a note.
