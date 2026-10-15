@@ -33,7 +33,7 @@ Procedure according to the swap test protocol, section "Measurement procedure fo
 | Quantity | Value | Limit |
 | --- | --- | --- |
 | VDDIO | same as VDDIN (VDDIO is connected to VDDIN on the board, not measured separately) | 3.0–3.6 V |
-| VDDIN | 3.2989 V average, 200 mV peak-to-peak | 3.0–3.6 V (not yet verified against the datasheet) |
+| VDDIN | 3.2989 V average, 200 mV peak-to-peak | 3.0–3.6 V |
 | VDDCORE | 1.7718 V average, 240 mV peak-to-peak | 1.65–1.95 V |
 | Ambient temperature | 24.7 °C | – |
 
