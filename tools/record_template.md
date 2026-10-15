@@ -19,7 +19,7 @@ Procedure according to the swap test protocol, section "Measurement procedure fo
 - [ ] Programming, only where the procedure requires it: `tools/program.ps1` → `program.txt`
 - [ ] JTAG connected, readback `tools/readback.ps1` → `readback.txt` with `RESULT OK` (SHA-256 of flash = binary)
 - [ ] JTAG disconnected from the board
-- [ ] Photo of the board with readable CPU marking, board label and step label, with a time stamp in the image, taken during the measurement of the configuration (between the readback and the end of the UART capture): `photo_*.jpg`
+- [ ] Photo of the board with readable CPU marking and board label, with a time stamp in the image, taken during the measurement of the configuration (between the readback and the end of the UART capture): `photo_*.jpg`
 - [ ] UART capture started `tools/capture.ps1` → `uart.raw`, `uart.log`
 - [ ] Three runs: power off, wait ≥ 10 s, power on, record the output until the RESULT line
 - [ ] VDDIO, VDDIN, VDDCORE and ambient temperature measured during the 1st run (below)
