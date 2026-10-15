@@ -33,7 +33,7 @@ Measurement repository for the swap test of the AT32UC3A0512 CPU (silicon revisi
     └── SHA256SUMS                hashes of all files in the folder
 ```
 
-Record folders: `REG` = regression run of the final firmware during preparation; `STEP1`, `STEP6`, `STEP7` = measurement steps of the protocol (numbering of the Microchip SWAP TEST article). The step is followed by the board and the CPU mounted in that configuration.
+Record folders: `REG` = regression run of the final firmware during preparation; `STEP1`, `STEP6`, `STEP7` = measurement steps of the protocol (numbering of the Microchip SWAP TEST article). The step is followed by the board and the CPU mounted in that configuration. A folder with the suffix `_attempt1` holds a superseded attempt, kept unchanged; the reason is given in the record of the repeated configuration.
 
 ## Units under test
 
