@@ -26,7 +26,7 @@ Procedure according to the swap test protocol, section "Measurement procedure fo
 - [x] Capture stopped, evaluation `tools/evaluate.py` → `evaluate.txt`
 - [x] Hashes `tools/sha256sums.ps1` → `SHA256SUMS`, commit and push
 
-The e-mail with the SHA-256 of `SHA256SUMS` and the signatures follow the hashes and are therefore not part of this record. The SHA-256 of `SHA256SUMS` and the date of the e-mail are entered in the table of records in the protocol; the signatures of the operator and the checker on the protocol cover that table.
+The SHA-256 of `SHA256SUMS` and the signatures follow the hashes and are therefore not part of this record. The SHA-256 of `SHA256SUMS` is entered in the table of records in the protocol; the signatures of the operator and the checker on the protocol cover that table.
 
 ## Measurements during the 2nd run
 
