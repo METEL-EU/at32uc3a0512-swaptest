@@ -1,0 +1,59 @@
+Firmware check OK
+Tool jtagice3 has firmware version: 03.38
+Target voltage: 2.47 V
+
+Device information:
+
+Name:       at32uc3a0512  
+JtagId:     0xb1edc03f    
+Revision:   L             
+CPU arch.:  AVR32_UC3     
+
+Security bit is not set.
+
+Memory Information:
+
+Address Space    StartAddress            Size
+
+sysreg                    0x0           0x400
+
+dbgreg                    0x0           0x400
+
+base                      0x0     0x100000000
+  EBI_CS0          0xc0000000       0x1000000
+  EBI_CS1          0xd0000000       0x8000000
+  EBI_CS2          0xc8000000       0x1000000
+  EBI_CS3          0xcc000000       0x1000000
+  FLASH            0x80000000         0x80000
+  USER_PAGE        0x80800000           0x200
+  SRAM                    0x0         0x10000
+  USBB_SLAVE       0xe0000000        0x800000
+  IO               0xfffe0000         0x20000
+
+fuses              0xfffe1410             0x4
+
+
+Fuses:
+FGPFRLO (0xffffffffL):
+   BODEN         0x3L
+   BODHYST       OFF
+   BODLEVEL      0x3fL
+   BOOTPROT      0x7L
+   EPFL          OFF
+   LOCK15        OFF
+   LOCK14        OFF
+   LOCK13        OFF
+   LOCK12        OFF
+   LOCK11        OFF
+   LOCK10        OFF
+   LOCK9         OFF
+   LOCK8         OFF
+   LOCK7         OFF
+   LOCK6         OFF
+   LOCK5         OFF
+   LOCK4         OFF
+   LOCK3         OFF
+   LOCK2         OFF
+   LOCK1         OFF
+   LOCK0         OFF
+
