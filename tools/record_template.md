@@ -22,7 +22,7 @@ Procedure according to the swap test protocol, section "Measurement procedure fo
 - [ ] Photo of the board with readable CPU marking and board label, with a time stamp in the image, taken during the measurement of the configuration (between the readback and the end of the UART capture): `photo_*.jpg`
 - [ ] UART capture started `tools/capture.ps1` → `uart.raw`, `uart.log`
 - [ ] Three runs: power off, wait ≥ 10 s, power on, record the output until the RESULT line
-- [ ] VDDIO, VDDIN, VDDCORE and ambient temperature measured during the 1st run (below)
+- [ ] VDDIN, VDDCORE (VDDIO is connected to VDDIN on the board) and ambient temperature measured during the 1st run (below); oscilloscope probes connected with the power off, screenshot `scope_*.png` saved within the first minute of the run
 - [ ] Capture stopped, evaluation `tools/evaluate.py` → `evaluate.txt`
 - [ ] Hashes `tools/sha256sums.ps1` → `SHA256SUMS`, commit and push
 
@@ -32,8 +32,8 @@ The SHA-256 of `SHA256SUMS` and the signatures follow the hashes and are therefo
 
 | Quantity | Value | Limit |
 | --- | --- | --- |
-| VDDIO | <V> | 3.0–3.6 V |
-| VDDIN | <V> | <from datasheet> |
+| VDDIO | same as VDDIN (connected on the board) | 3.0–3.6 V |
+| VDDIN | <V> | 3.0–3.6 V |
 | VDDCORE | <V> | 1.65–1.95 V |
 | Ambient temperature | <°C> | – |
 
@@ -47,7 +47,7 @@ Power-on time = first `Break` event in `uart.log` (the `BOOT rc` marker is sent 
 | 2 | | | | |
 | 3 | | | | |
 
-Total number of power-ons, including repeated attempts: <n>
+Total number of power-ons, including repeated attempts (INCOMPLETE, DID NOT START or invalid runs): <n>
 
 ## Configuration result
 

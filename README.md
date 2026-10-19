@@ -1,6 +1,6 @@
 # AT32UC3A0512 CPU swap test
 
-Measurement repository for the swap test of the AT32UC3A0512 CPU (silicon revision L) using the A-B-A method: diagnostic firmware, measurement tools and the records of each step. The procedure, criteria and evaluation are defined by the swap test protocol; its approved, filled-in version will be stored here.
+Measurement repository for the swap test of the AT32UC3A0512 CPU (silicon revision L) using the A-B-A method: diagnostic firmware, measurement tools and the records of each step. The procedure, criteria and evaluation are defined by the swap test protocol; the PDF of its approved version is stored here before step 1 (folder `PROTOCOL_v1.0`) and the completed, signed version after the test.
 
 ## Structure
 
@@ -8,7 +8,9 @@ Measurement repository for the swap test of the AT32UC3A0512 CPU (silicon revisi
 .
 ├── README.md                     this description
 ├── .gitignore, .gitattributes    files are stored byte-exact (* -text, no line-ending conversion)
+├── PROTOCOL_v1.0/                PDF of the approved protocol and its SHA256SUMS
 ├── 20261010_swaptest_final/      diagnostic firmware
+│   ├── FINAL.md                  description of the firmware
 │   ├── Makefile                  build: make COMSPEC=%ComSpec% clean all (WinAVR 20100110)
 │   ├── src/                      sources; test core = check.S, ref.c, data*.c, placement.ld
 │   ├── bin/                      test_uc3a0512.bin (to be programmed), .elf, .map
@@ -30,6 +32,7 @@ Measurement repository for the swap test of the AT32UC3A0512 CPU (silicon revisi
     ├── uart.raw, uart.log        raw UART output and the same output with receive time
     ├── evaluate.txt              output of evaluate.py
     ├── photo_*.jpg               photos of the board with the CPU
+    ├── scope_*.png               oscilloscope screenshot of the supply voltages
     └── SHA256SUMS                hashes of all files in the folder
 ```
 
@@ -55,11 +58,11 @@ After power-on the firmware runs 100 cycles of 480 check reads from the internal
 | `20261010_swaptest_final/bin/test_uc3a0512.bin` | `2ECFE5317649FABD27797608F3F9924AAAC45B4DAA870A7546195E9975294440` |
 | `20261010_swaptest_final/bin/test_uc3a0512.elf` | `6675E8E3E4B4FF880ADD0A8B817B13226083ECCD2A64DC31F07DB1B353E08909` |
 
-Firmware version 2 (`ID fw=swaptest_final ver=2`, `RESULT … fw=swaptest_final-2`). CRC32 of the flash image computed and printed by the firmware: `0xfb47ddb9`. Two independent builds are bit-identical (`build_check/`).
+Firmware version 2 (`ID fw=swaptest_final ver=2`, `RESULT … fw=swaptest_final-2`). CRC32 of the flash image computed and printed by the firmware: `0xfb47ddb9`. Two independent builds are bit-identical (`build_check/`). Full description: `20261010_swaptest_final/FINAL.md`.
 
 ## Measuring one configuration
 
-Requirements: JTAGICE3 and `atprogram` from Atmel Studio 7, USB–UART converter on COM6, Windows PowerShell 5.1, Python 3. Example for `REG_PCB1-X`, run from the `cmd` command line in the repository root:
+Requirements: JTAGICE3 and `atprogram` from Atmel Studio 7, USB–RS-485 converter (METEL USB485-BOX) on COM6, Windows PowerShell 5.1, Python 3. Example for `REG_PCB1-X`, run from the `cmd` command line in the repository root:
 
 ```
 mkdir REG_PCB1-X
