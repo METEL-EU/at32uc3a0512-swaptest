@@ -1,0 +1,15 @@
+record: STEP6_PCB2-X\uart.log
+expected: sn=141916cb4450334d342e3120ff060b board=8a3203841518175d crc=fb47ddb9
+run 1: START 16:39:13.004 -> INCOMPLETE (cycles 0, exceptions 0)
+run 2: START 16:39:34.355 -> FAIL  valid
+    duration 120.6 s, cycles 100/100, errors 46311/48000 (min 446, max 477, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65938070, osc0rdy_wait 2034, lock0_wait 1080, oscctrl0 0x00000307, fcr 0x00000040
+run 3: START 16:41:56.104 -> FAIL  valid
+    duration 120.5 s, cycles 100/100, errors 45929/48000 (min 448, max 468, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65889470, osc0rdy_wait 2034, lock0_wait 1062, oscctrl0 0x00000307, fcr 0x00000040
+run 4: START 16:44:19.393 -> FAIL  valid
+    duration 120.6 s, cycles 100/100, errors 45790/48000 (min 446, max 467, failed cycles 100, first 1), ref 0, rcause 00000001, boot_tmo 0, exceptions 0
+    fcpu_meas 65875070, osc0rdy_wait 2034, lock0_wait 1134, oscctrl0 0x00000307, fcr 0x00000040
+
+runs with START: 4, valid: 3, results: ['INCOMPLETE', 'FAIL', 'FAIL', 'FAIL']
+CONFIGURATION RESULT: FAIL
